@@ -1,15 +1,11 @@
 import express from 'express'
-import { products } from './data.js';
+import initializeRoutes from './startup/routes.js'
 
 const app = express();
+initializeRoutes(app);
 
-app.get('/api/products', (req, res) => {
-    res.send(products)
-})
 
-app.get('/', (req, res) => {
-    res.send('server is running')
-})
+
 const port = process.env.PORT || 5000
 
 app.listen(port, () => { console.log(`server running on port ${port}`) })
