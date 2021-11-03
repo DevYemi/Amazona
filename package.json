@@ -1,0 +1,23 @@
+{
+  "name": "amazona",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Ecommerce Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevYemi/Amazona.git"
+  },
+  "author": "Adeyanju Adeyanju",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DevYemi/Amazona/issues"
+  },
+  "homepage": "https://github.com/DevYemi/Amazona#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
