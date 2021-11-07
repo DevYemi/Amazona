@@ -1,6 +1,21 @@
+import bcrypt from 'bcrypt'
+export const users = [
+    {
+        name: 'Adeyemi',
+        email: 'test@gmail.com',
+        password: bcrypt.hashSync('123456', 8),
+        isAdmin: true
+    },
+    {
+        name: 'Adeyanju',
+        email: 'test2@gmail.com',
+        password: bcrypt.hashSync('123456', 8),
+        isAdmin: false
+    }
+]
+
 export const products = [
     {
-        _id: 1,
         name: 'Nike Slim Pants',
         category: 'pants',
         img: '/img/p1.jpg',
@@ -12,7 +27,6 @@ export const products = [
         description: 'High Quality Products'
     },
     {
-        _id: 2,
         name: 'Addidas Slim Pants',
         category: 'pants',
         img: '/img/p2.jpg',
@@ -24,7 +38,6 @@ export const products = [
         description: 'Super High Quality Products'
     },
     {
-        _id: 3,
         name: 'Puma Slim Shirt',
         category: 'Shirt',
         img: '/img/p3.jpg',
@@ -36,7 +49,6 @@ export const products = [
         description: 'Low Quality Products'
     },
     {
-        _id: 4,
         name: 'Yizzy Shoes',
         category: 'shoes',
         img: '/img/p4.jpg',
@@ -48,7 +60,6 @@ export const products = [
         description: 'Super High Quality Products'
     },
     {
-        _id: 5,
         name: 'Fendi Slim Shirt',
         category: 'shirt',
         img: '/img/p5.jpg',
@@ -60,7 +71,6 @@ export const products = [
         description: 'Very High Quality Products'
     },
     {
-        _id: 6,
         name: 'Versace Slim Shirt',
         category: 'Shirt',
         img: '/img/p6.jpg',
