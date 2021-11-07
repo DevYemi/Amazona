@@ -40,6 +40,26 @@ routes.post('/signin', expressAsyncHandler(async (req, res) => {
     })
 }))
 
+// @route   Post /api/users/signup
+// @desc    register a new user
+// @access  Public
+routes.post('/signup', expressAsyncHandler(async (req, res) => {
+    const newUser = new User({
+        name: req.body.name,
+        email: req.body.email,
+        password: bcrypt.hashSync(req.body.password, 8)
+    })
+
+    const createdUser = await newUser.save();
+    res.send({
+        _id: createdUser._id,
+        name: createdUser.name,
+        email: createdUser.email,
+        isAdmin: createdUser.isAdmin,
+        token: generateToken(createdUser)
+    })
+}))
+
 
 
 
