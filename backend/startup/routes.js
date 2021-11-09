@@ -1,5 +1,6 @@
 import productRoute from '../routes/productRoute.js'
 import userRoute from '../routes/userRoute.js'
+import orderRoute from '../routes/orderRoute.js'
 import express from 'express'
 export default function initializeRoutes(app) {
     app.use(express.urlencoded({ extended: false }));
@@ -8,5 +9,6 @@ export default function initializeRoutes(app) {
         res.status(500).send({ message: err.message })
     })
     app.use('/api/products', productRoute);
-    app.use('/api/users', userRoute)
+    app.use('/api/users', userRoute);
+    app.use('/api/orders', orderRoute)
 }
